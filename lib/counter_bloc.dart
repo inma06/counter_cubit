@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:bloc/bloc.dart';
 
 abstract class CounterEvent {}
@@ -20,19 +22,19 @@ class CounterBloc extends Bloc<CounterEvent, int> {
 
   @override
   void onChange(Change<int> change) {
-    print(change);
+    // print(change);
     super.onChange(change);
   }
 
   @override
   void onError(Object error, StackTrace stackTrace) {
-    print('$error, $stackTrace');
+    // print('$error :: $stackTrace');
     super.onError(error, stackTrace);
   }
 
   @override
   void onTransition(Transition<CounterEvent, int> transition) {
-    print(transition);
+    // print('transition :: $transition');
     super.onTransition(transition);
   }
 }

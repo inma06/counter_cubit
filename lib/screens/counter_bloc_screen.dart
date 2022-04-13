@@ -5,25 +5,21 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class CounterBlocScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // final counterBloc = BlocProvider.of<CounterBloc>(context);
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Bloc'),
       ),
-      body: BlocBuilder<CounterBloc, int>(
-        builder: (context, counter) {
-          return Center(
-            child: Text(
-              '$counter',
-              style: TextStyle(
-                fontSize: 48,
-                fontWeight: FontWeight.bold,
-              ),
+      body: BlocBuilder<CounterBloc, int>(builder: (context, counter) {
+        return Center(
+          child: Text(
+            '$counter',
+            style: TextStyle(
+              fontSize: 48,
+              fontWeight: FontWeight.bold,
             ),
-          );
-        },
-      ),
+          ),
+        );
+      }),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
